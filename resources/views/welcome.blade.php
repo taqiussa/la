@@ -19,58 +19,45 @@
         x-transition:enter-start="transform -translate-y-full" x-transition:enter-end="transform translate-y-0"
         x-transition:leave="transition duration-1000" x-transition:leave-start="transform"
         x-transition:leave-end="transform -translate-y-full"
-        class="max-w-md mx-auto border-2 border-pink-300 flex flex-col top-0 w-full h-screen bg-gradient-to-tr from-red-200 via-zinc-200 to-purple-300 p-5 justify-center items-center space-y-10">
-        <div
+        class="max-w-md mx-auto border-2 border-pink-300 flex flex-col top-0 w-full h-screen bg-gradient-to-tr from-red-200 via-zinc-200 to-purple-300 p-5 justify-center items-center">
+
+        <div class="text-xl font-semibold text-pink-600 mb-5 tracking-widest">
+            Wedding Invitation
+        </div>
+
+        <div>
+            <img src="{{ asset('images/prewed1.jpg') }}" alt="couple"
+                class=" w-48 rounded-tr-full rounded-bl-full border-2 border-pink-500">
+        </div>
+        {{-- <div
             class="text-7xl font-semibold 
         bg-gradient-to-r bg-clip-text  text-transparent 
         from-purple-300 via-sky-200 to-fuchsia-300
         animate-text pr-20">
             Linda
-        </div>
+        </div> --}}
         <div @click="active = 2" id="backdrop" class="cursor-pointer flex flex-col items-center">
-            <svg style="width: 60px; height: 60px "viewBox="0 0 24 24" class=' text-purple-300 animate-pulse'>
+            <svg style="width: 60px; height: 60px "viewBox="0 0 24 24" class=' text-pink-500 animate-pulse'>
                 <path fill="currentColor"
                     d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M9.75,7.82C8.21,7.82 7,9.03 7,10.57C7,12.46 8.7,14 11.28,16.34L12,17L12.72,16.34C15.3,14 17,12.46 17,10.57C17,9.03 15.79,7.82 14.25,7.82C13.38,7.82 12.55,8.23 12,8.87C11.45,8.23 10.62,7.82 9.75,7.82Z" />
             </svg>
-            <div class="text-md text-purple-300 animate-bounce">
+            <div class="text-md text-pink-400 animate-bounce">
                 Click Me
             </div>
         </div>
+
         <div
-            class="text-7xl font-semibold 
+            class="text-3xl font-bold 
         bg-gradient-to-r bg-clip-text  text-transparent 
-        from-purple-300 via-sky-200 to-fuchsia-300
-        animate-text pl-20">
-            Arif
+        from-fuchsia-500 via-indigo-300 to-pink-500
+        animate-text tracking-widest">
+            Linda & Arif
         </div>
+
     </section>
     <section x-show="active == 2" x-transition:enter="transition ease-in-out duration-1000"
         x-transition:enter-start="transform -translate-y-0" x-transition:enter-end="transform -translate-y-full"
         class="max-w-md mx-auto border-2 border-pink-1000 h-screen flex flex-col bg-gradient-to-bl from-indigo-400 via-zinc-100 to-rose-300 animate-text">
-        <div @click="active = 1" id="header"
-            class="flex-1top-0 sticky w-full backdrop-blur bg-white/60 grid grid-cols-3 gap-4">
-            <div
-                class="text-3xl font-bold 
-                    bg-gradient-to-r bg-clip-text  text-transparent 
-                    from-purple-300 via-sky-200 to-fuchsia-300
-                    animate-text place-self-start pl-10">
-                Linda
-            </div>
-            <div class="place-self-center">
-                <svg style="width: 48px; height: 48px "viewBox="0 0 24 24"
-                    class=' text-purple-300 animate-pulse cursor-pointer'>
-                    <path fill="currentColor"
-                        d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M9.75,7.82C8.21,7.82 7,9.03 7,10.57C7,12.46 8.7,14 11.28,16.34L12,17L12.72,16.34C15.3,14 17,12.46 17,10.57C17,9.03 15.79,7.82 14.25,7.82C13.38,7.82 12.55,8.23 12,8.87C11.45,8.23 10.62,7.82 9.75,7.82Z" />
-                </svg>
-            </div>
-            <div
-                class="text-3xl font-bold 
-                    bg-gradient-to-r bg-clip-text  text-transparent 
-                    from-purple-300 via-sky-200 to-fuchsia-300
-                    animate-text place-self-end pr-20">
-                Arif
-            </div>
-        </div>
         <div class="flex-grow overflow-y-auto p-3">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum officia aut porro explicabo ea? Possimus,
             temporibus nostrum laborum vero doloribus, accusamus dolores quod ab blanditiis quidem iste! Rerum ad saepe
@@ -107,7 +94,7 @@
         </div>
 
         <div id="footer"
-            class="sticky flex-1 w-full bottom-0 flex justify-between border-t-2 border-emeral-400 px-7 py-1 backdrop-blur bg-white/60">
+            class="sticky flex-1 w-full bottom-0 flex justify-between  px-7 py-1 backdrop-blur bg-white/60">
             <div>
                 <svg style="width:36px;height:36px" viewBox="0 0 24 24" class="text-purple-300">
                     <path fill="currentColor"
@@ -120,12 +107,15 @@
                         d="M21 11.11V5C21 3.9 20.11 3 19 3H14.82C14.4 1.84 13.3 1 12 1S9.6 1.84 9.18 3H5C3.9 3 3 3.9 3 5V19C3 20.11 3.9 21 5 21H11.11C12.37 22.24 14.09 23 16 23C19.87 23 23 19.87 23 16C23 14.09 22.24 12.37 21 11.11M12 3C12.55 3 13 3.45 13 4S12.55 5 12 5 11 4.55 11 4 11.45 3 12 3M5 19V5H7V7H17V5H19V9.68C18.09 9.25 17.08 9 16 9H7V11H11.1C10.5 11.57 10.04 12.25 9.68 13H7V15H9.08C9.03 15.33 9 15.66 9 16C9 17.08 9.25 18.09 9.68 19H5M16 21C13.24 21 11 18.76 11 16S13.24 11 16 11 21 13.24 21 16 18.76 21 16 21M16.5 16.25L19.36 17.94L18.61 19.16L15 17V12H16.5V16.25Z" />
                 </svg>
             </div>
-            <div>
-                <svg style="width: 36px; height: 36px "viewBox="0 0 24 24"
-                class=' text-purple-300 animate-pulse cursor-pointer'>
-                <path fill="currentColor"
-                    d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M9.75,7.82C8.21,7.82 7,9.03 7,10.57C7,12.46 8.7,14 11.28,16.34L12,17L12.72,16.34C15.3,14 17,12.46 17,10.57C17,9.03 15.79,7.82 14.25,7.82C13.38,7.82 12.55,8.23 12,8.87C11.45,8.23 10.62,7.82 9.75,7.82Z" />
-            </svg>
+            <div @click="active = 1" class="relative">
+                <div class=" absolute -top-5 -translate-x-1/2 bg-white rounded-full">
+                    <svg style="width: 48px; height: 48px "viewBox="0 0 24 24"
+                        class=' text-purple-300 animate-pulse cursor-pointer'>
+                        <path fill="currentColor"
+                            d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M9.75,7.82C8.21,7.82 7,9.03 7,10.57C7,12.46 8.7,14 11.28,16.34L12,17L12.72,16.34C15.3,14 17,12.46 17,10.57C17,9.03 15.79,7.82 14.25,7.82C13.38,7.82 12.55,8.23 12,8.87C11.45,8.23 10.62,7.82 9.75,7.82Z" />
+                    </svg>
+                </div>
+                </svg>
             </div>
             <div>
                 <svg style="width:36px;height:36px" viewBox="0 0 24 24" class="text-purple-300">

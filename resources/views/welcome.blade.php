@@ -146,13 +146,13 @@
                         <img src="{{ asset('images/oppa.jpeg') }}" alt="prewed1" class=" w-48 rounded-lg rotate-6">
                     </div>
                     <div class="border-2 rounded-lg border-fuchsia-400 place-self-start -rotate-12 backdrop-blur bg-white/50 shadow-md shadow-fuchsia-400">
-                        <img src="{{ asset('images/cacik2.jpeg') }}" alt="prewed1" class=" w-48 rounded-lg rotate-6">
+                        <img src="{{ asset('images/prewed4.jpg') }}" alt="prewed1" class=" w-48 rounded-lg rotate-6">
                     </div>
                     <div class="border-2 rounded-lg border-fuchsia-400 place-self-center rotate-6 backdrop-blur bg-white/50 shadow-md shadow-fuchsia-400">
                         <img src="{{ asset('images/cacik1.jpeg')}}" alt="prewed1" class=" w-48 rounded-lg rotate-6">
                     </div>
                     <div class="border-2 rounded-lg border-fuchsia-400 place-self-end -rotate-12 bg-gradient-to-tr from-indigo-300 via-pink-200 to-fuchsia-300 shadow-md shadow-fuchsia-400">
-                        <img src="{{ asset('images/exo.png') }}" alt="prewed1" class=" w-48 rounded-lg rotate-6">
+                        <img src="{{ asset('images/berdua.jpg') }}" alt="prewed1" class=" w-48 rounded-lg rotate-6">
                     </div>
                 </div>
             </section>

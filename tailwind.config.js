@@ -12,6 +12,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                brush : ['Alex Brush']
             },
             animation: {
                 'text': 'text 5s ease infinite',

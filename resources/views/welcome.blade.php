@@ -15,30 +15,46 @@
     <link rel="icon" href="{{ asset('images/exo.png') }}" type="image/png" sizes="16x16" />
 
     <!-- Scripts -->
+    @livewireScripts
+    @livewireStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body x-data="{ active: 1 }" class="antialiased scroll-smooth">
+<body x-data="{ active: 2 }" class="antialiased scroll-smooth">
+    {{-- Cover --}}
     <section x-show="active == 1" x-transition:enter="transition duration-1000"
         x-transition:enter-start="transform -translate-y-full" x-transition:enter-end="transform translate-y-0"
         x-transition:leave="transition duration-1000" x-transition:leave-start="transform"
         x-transition:leave-end="transform -translate-y-full"
         class="max-w-md mx-auto border-2 border-pink-300 flex flex-col top-0 w-full h-screen bg-gradient-to-tr from-red-200 via-zinc-200 to-purple-300 p-5 justify-center items-center relative">
+
+
         <div class="absolute top-12 left-1 z-10">
             <img src="{{ asset('images/exo.png') }}" alt="exo" class="w-48">
         </div>
-        <div
-            class="text-3xl mb-5 font-bold 
-        bg-gradient-to-r bg-clip-text  text-transparent 
-        from-fuchsia-500 via-indigo-300 to-pink-500
-        animate-text tracking-widest z-20">
-            Wedding Invitation
+
+        <div class="flex flex-col items-center justify-center">
+
+            <div
+                class="text-2xl mb-5 font-bold 
+            bg-gradient-to-r bg-clip-text  text-transparent 
+            from-fuchsia-500 via-indigo-300 to-pink-500
+            animate-text tracking-widest z-20">
+                Wedding Invitation
+            </div>
+            <div class="text-2xl text-white absolute font-bold -translate-y-2 translate-x-0 z-10 tracking-widest">
+                Wedding Invitation
+            </div>
+
         </div>
 
         <div>
             <img src="{{ asset('images/prewed1.jpg') }}" alt="couple"
                 class=" w-48 rounded-tr-full rounded-bl-full border-2 border-pink-500 shadow-md shadow-fuchsia-500">
         </div>
+        <audio hidden autoplay loop>
+            <source src="{{ asset('star.wav') }}" type="audio/wav">
+        </audio>
         <div id="backdrop" class=" flex flex-col items-center">
             <svg @click="active = 2" style="width: 60px; height: 60px "viewBox="0 0 24 24"
                 class=' text-pink-500 animate-pulse cursor-pointer'>
@@ -50,15 +66,24 @@
             </div>
         </div>
 
-        <div
-            class="text-4xl font-bold 
-        bg-gradient-to-r bg-clip-text  text-transparent 
-        from-fuchsia-500 via-indigo-300 to-pink-500
-        animate-text tracking-widest">
-            Linda & Arif
+        <div class="flex flex-col items-center justify-center">
+
+            <div
+                class="text-4xl mb-5 font-bold 
+            bg-gradient-to-r bg-clip-text  text-transparent 
+            from-fuchsia-500 via-indigo-300 to-pink-500
+            animate-text tracking-widest z-20">
+                Linda & Arif
+            </div>
+            <div class="text-4xl text-white absolute font-bold -translate-y-2 translate-x-0 z-10 tracking-widest">
+                Linda & Arif
+            </div>
+
         </div>
 
     </section>
+
+    {{-- ISI --}}
     <section x-show="active == 2" x-transition:enter="transition ease-in-out duration-1000"
         x-transition:enter-start="transform -translate-y-0" x-transition:enter-end="transform -translate-y-full"
         class="max-w-md mx-auto border-2 border-pink-1000 h-screen flex flex-col bg-gradient-to-bl from-indigo-400 via-zinc-100 to-rose-300 animate-text scroll-smooth">
@@ -77,7 +102,7 @@
                             ridho-Mu tercurahkan mengiringi pernikahan kami.</span>
                     </div>
                     <div class="border-2 border-fuchsia-300 shadow-md shadow-fuchsia-400 rounded-full">
-                        <img src="{{ asset('images/cacik1.jpeg') }}" alt="pria"
+                        <img src="{{ asset('images/cacik2.jpeg') }}" alt="pria"
                             class=" rounded-full w-32 h-32 object-cover object-top">
                     </div>
                     <div class="mb-1">
@@ -132,42 +157,101 @@
 
             <section id="galeri">
                 <div
-                    class=" border border-slate-200 shadow-sm shadow-pink-700 backdrop-blur bg-white/80 rounded-lg flex flex-col  items-center px-1 py-5">
-                    <div
-                        class="border-2 rounded-lg border-fuchsia-400 place-self-start -rotate-12 backdrop-blur bg-white/50 shadow-md shadow-fuchsia-400">
-                        <img src="{{ asset('images/prewed1.jpg') }}" alt="prewed1" class=" w-48 rounded-lg rotate-6">
+                    class=" border border-slate-200 shadow-sm shadow-pink-700 backdrop-blur bg-white/80 rounded-lg flex flex-col  items-center px-1 py-5 space-y-10">
+                    <div class="flex space-x-10">
+                        <div class="cursor-pointer border-2 rounded-lg border-fuchsia-400   backdrop-blur bg-white/50 shadow-md shadow-fuchsia-400"
+                            onclick="openModal();currentSlide(1)">
+                            <img src="{{ asset('images/prewed1.jpg') }}" alt="prewed1" class=" w-36 rounded-lg ">
+                        </div>
+                        <div class="cursor-pointer border-2 rounded-lg border-fuchsia-400   backdrop-blur bg-white/50 shadow-md shadow-fuchsia-400"
+                            onclick="openModal();currentSlide(2)">
+                            <img src="{{ asset('images/prewed2.jpg') }}" alt="prewed1" class=" w-36 rounded-lg ">
+                        </div>
                     </div>
-                    <div
-                        class="border-2 rounded-lg border-fuchsia-400 place-self-center rotate-6 backdrop-blur bg-white/50 shadow-md shadow-fuchsia-400">
-                        <img src="{{ asset('images/prewed2.jpg') }}" alt="prewed1" class=" w-48 rounded-lg rotate-6">
+                    <div class="flex justify-center">
+                        <div class="cursor-pointer border-2 rounded-lg border-fuchsia-400 place-self-end  bg-gradient-to-tr from-indigo-300 via-pink-200 to-fuchsia-300 shadow-md shadow-fuchsia-400"
+                            onclick="openModal();currentSlide(4)">
+                            <img src="{{ asset('images/berdua.jpg') }}" alt="prewed1" class=" w-36 rounded-lg ">
+                        </div>
                     </div>
-                    <div
-                        class="border-2 rounded-lg border-fuchsia-400 place-self-end -rotate-12 backdrop-blur bg-white/50 shadow-md shadow-fuchsia-400">
-                        <img src="{{ asset('images/prewed3.jpg') }}" alt="prewed1" class=" w-48 rounded-lg rotate-6">
+                    <div class="flex space-x-10">
+                        <div class="cursor-pointer border-2 rounded-lg border-fuchsia-400 place-self-end  backdrop-blur bg-white/50 shadow-md shadow-fuchsia-400"
+                            onclick="openModal();currentSlide(3)">
+                            <img src="{{ asset('images/prewed3.jpg') }}" alt="prewed1" class=" w-36 rounded-lg ">
+                        </div>
+                        <div class="flex space-x-10">
+                            <div class="cursor-pointer border-2 rounded-lg border-fuchsia-400 place-self-end  backdrop-blur bg-white/50 shadow-md shadow-fuchsia-400"
+                                onclick="openModal();currentSlide(5)">
+                                <img src="{{ asset('images/prewed4.jpg') }}" alt="prewed1"
+                                    class=" w-36 rounded-lg ">
+                            </div>
+                        </div>
                     </div>
-                    <div
-                        class="border-2 rounded-lg border-fuchsia-400 place-self-center rotate-6 backdrop-blur bg-white/50 shadow-md shadow-fuchsia-400">
-                        <img src="{{ asset('images/oppa.jpeg') }}" alt="prewed1" class=" w-48 rounded-lg rotate-6">
-                    </div>
-                    <div
-                        class="border-2 rounded-lg border-fuchsia-400 place-self-start -rotate-12 backdrop-blur bg-white/50 shadow-md shadow-fuchsia-400">
-                        <img src="{{ asset('images/prewed4.jpg') }}" alt="prewed1" class=" w-48 rounded-lg rotate-6">
-                    </div>
-                    <div
-                        class="border-2 rounded-lg border-fuchsia-400 place-self-center rotate-6 backdrop-blur bg-white/50 shadow-md shadow-fuchsia-400">
-                        <img src="{{ asset('images/cacik1.jpeg') }}" alt="prewed1"
-                            class=" w-48 rounded-lg rotate-6">
-                    </div>
-                    <div
-                        class="border-2 rounded-lg border-fuchsia-400 place-self-end -rotate-12 bg-gradient-to-tr from-indigo-300 via-pink-200 to-fuchsia-300 shadow-md shadow-fuchsia-400">
-                        <img src="{{ asset('images/berdua.jpg') }}" alt="prewed1"
-                            class=" w-48 rounded-lg rotate-6">
+                </div>
+                <!-- The Modal/Lightbox -->
+                <div id="myModal" class="modal">
+                    <span class="close cursor" onclick="closeModal()">&times;</span>
+                    <div class="modal-content">
+
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 5</div>
+                            <img src="{{ asset('images/prewed1.jpg') }}" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 5</div>
+                            <img src="{{ asset('images/prewed2.jpg') }}" style="width:100%">
+                        </div>
+
+
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 5</div>
+                            <img src="{{ asset('images/prewed3.jpg') }}" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">4 / 5</div>
+                            <img src="{{ asset('images/berdua.jpg') }}" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">5 / 5</div>
+                            <img src="{{ asset('images/prewed4.jpg') }}" style="width:100%">
+                        </div>
+
+                        <!-- Next/previous controls -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                        <!-- Caption text -->
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+
+                        <!-- Thumbnail image controls -->
+                        <div class="column">
+                            <img class="demo" src="{{ asset('images/prewed1.jpg') }}" onclick="currentSlide(1)">
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="{{ asset('images/prewed2.jpg') }}" onclick="currentSlide(2)">
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="{{ asset('images/prewed3.jpg') }}" onclick="currentSlide(3)">
+                        </div>
+
+                        <div class="column">
+                            <img class="demo" src="{{ asset('images/berdua.jpg') }}" onclick="currentSlide(4)">
+                        </div>
+                        <div class="column">
+                            <img class="demo" src="{{ asset('images/prewed4.jpg') }}" onclick="currentSlide(5)">
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section id="komentar">
-
             </section>
 
         </div>
@@ -215,6 +299,52 @@
             </div>
         </div>
     </section>
+    <script>
+        // Open the Modal
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        // Close the Modal
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
 </body>
 
 </html>

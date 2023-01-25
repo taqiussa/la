@@ -87,7 +87,7 @@
     <section x-show="active == 2" x-transition:enter="transition ease-in-out duration-1000"
         x-transition:enter-start="transform -translate-y-0" x-transition:enter-end="transform -translate-y-full"
         class="max-w-md mx-auto border-2 border-pink-1000 h-screen flex flex-col bg-gradient-to-bl from-indigo-400 via-zinc-100 to-rose-300 animate-text scroll-smooth">
-        <div class="flex-grow overflow-y-auto p-3 space-y-5 scroll-smooth">
+        <div class="flex-grow overflow-y-auto p-3 space-y-5 scroll-smooth pb-10">
             <section id="jadwal">
                 <div
                     class=" border border-slate-200 shadow-sm shadow-pink-700 backdrop-blur bg-white/80 rounded-lg flex flex-col justify-center items-center px-1 py-5">

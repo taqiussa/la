@@ -20,7 +20,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body x-data="{ active: 2 }" class="antialiased scroll-smooth">
+<body x-data="{ active: 1 }" class="antialiased scroll-smooth">
     {{-- Cover --}}
     <section x-show="active == 1" x-transition:enter="transition duration-1000"
         x-transition:enter-start="transform -translate-y-full" x-transition:enter-end="transform translate-y-0"

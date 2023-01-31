@@ -156,7 +156,7 @@
                         <div>
                             G-Maps Link : <a href="https://maps.google.com/?q=-6.972199,110.307066&entry=gps" target="__blank" class="text-red-500">Clik Me</a>
                         </div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.51962224423318!2d110.30714384542104!3d-6.972237887451002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf05b7e8fb58e4a51!2zNsKwNTgnMTkuOSJTIDExMMKwMTgnMjUuNCJF!5e0!3m2!1sid!2sid!4v1675131067673!5m2!1sid!2sid" width="280" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.51962224423318!2d110.30714384542104!3d-6.972237887451002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf05b7e8fb58e4a51!2zNsKwNTgnMTkuOSJTIDExMMKwMTgnMjUuNCJF!5e0!3m2!1sid!2sid!4v1675131067673!5m2!1sid!2sid" width="300" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </section>

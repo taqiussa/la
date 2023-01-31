@@ -52,9 +52,9 @@
             <img src="{{ asset('images/prewed1.jpg') }}" alt="couple"
                 class=" w-48 rounded-tr-full rounded-bl-full border-2 border-pink-500 shadow-md shadow-fuchsia-500">
         </div>
-        <audio hidden autoplay loop>
-            <source src="{{ asset('star.wav') }}" type="audio/wav">
-        </audio>
+        <div class="hidden">
+            <embed src="{{ asset('star.mp3') }}" autostart=true loop=true >
+        </div>
         <div id="backdrop" class=" flex flex-col items-center">
             <svg @click="active = 2" style="width: 60px; height: 60px "viewBox="0 0 24 24"
                 class=' text-pink-500 animate-pulse cursor-pointer'>

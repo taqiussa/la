@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import '~jquery.button-audio-player/dist/jquery.button-audio-player.css';
+
 .row > .column {
 	padding: 0 8px;
   }

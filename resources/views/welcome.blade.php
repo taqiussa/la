@@ -20,7 +20,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body x-data="{ active: 1 }" class="antialiased scroll-smooth">
+<body x-data="{ active: 2 }" class="antialiased scroll-smooth">
     {{-- Cover --}}
     <section x-show="active == 1" x-transition:enter="transition duration-1000"
         x-transition:enter-start="transform -translate-y-full" x-transition:enter-end="transform translate-y-0"
@@ -157,35 +157,14 @@
 
             <section id="galeri">
                 <div
-                    class=" border border-slate-200 shadow-sm shadow-pink-700 backdrop-blur bg-white/80 rounded-lg flex flex-col  items-center px-1 py-5 space-y-10">
-                    <div class="flex space-x-10">
-                        <div class="cursor-pointer border-2 rounded-lg border-fuchsia-400   backdrop-blur bg-white/50 shadow-md shadow-fuchsia-400"
-                            onclick="openModal();currentSlide(1)">
-                            <img src="{{ asset('images/prewed1.jpg') }}" alt="prewed1" class=" w-36 rounded-lg ">
-                        </div>
-                        <div class="cursor-pointer border-2 rounded-lg border-fuchsia-400   backdrop-blur bg-white/50 shadow-md shadow-fuchsia-400"
-                            onclick="openModal();currentSlide(2)">
-                            <img src="{{ asset('images/prewed2.jpg') }}" alt="prewed1" class=" w-36 rounded-lg ">
-                        </div>
+                    class=" border border-slate-200 shadow-sm shadow-pink-700 backdrop-blur bg-white/80 rounded-lg flex flex-col  items-center px-1 py-7 space-y-7 pl-7 pr-7">
+                    <div class="cursor-pointer border-2 rounded-lg border-fuchsia-400 place-self-start   backdrop-blur bg-white/50 shadow-md shadow-fuchsia-400"
+                        onclick="openModal();currentSlide(1)">
+                        <img src="{{ asset('images/prewed2.jpg') }}" alt="prewed1" class=" w-64 rounded-lg ">
                     </div>
-                    <div class="flex justify-center">
-                        <div class="cursor-pointer border-2 rounded-lg border-fuchsia-400 place-self-end  bg-gradient-to-tr from-indigo-300 via-pink-200 to-fuchsia-300 shadow-md shadow-fuchsia-400"
-                            onclick="openModal();currentSlide(4)">
-                            <img src="{{ asset('images/berdua.jpg') }}" alt="prewed1" class=" w-36 rounded-lg ">
-                        </div>
-                    </div>
-                    <div class="flex space-x-10">
-                        <div class="cursor-pointer border-2 rounded-lg border-fuchsia-400 place-self-end  backdrop-blur bg-white/50 shadow-md shadow-fuchsia-400"
-                            onclick="openModal();currentSlide(3)">
-                            <img src="{{ asset('images/prewed3.jpg') }}" alt="prewed1" class=" w-36 rounded-lg ">
-                        </div>
-                        <div class="flex space-x-10">
-                            <div class="cursor-pointer border-2 rounded-lg border-fuchsia-400 place-self-end  backdrop-blur bg-white/50 shadow-md shadow-fuchsia-400"
-                                onclick="openModal();currentSlide(5)">
-                                <img src="{{ asset('images/prewed4.jpg') }}" alt="prewed1"
-                                    class=" w-36 rounded-lg ">
-                            </div>
-                        </div>
+                    <div class="cursor-pointer border-2 rounded-lg border-fuchsia-400 place-self-end  backdrop-blur bg-white/50 shadow-md shadow-fuchsia-400"
+                        onclick="openModal();currentSlide(2)">
+                        <img src="{{ asset('images/prewed3.jpg') }}" alt="prewed1" class=" w-64 rounded-lg ">
                     </div>
                 </div>
                 <!-- The Modal/Lightbox -->
@@ -194,29 +173,14 @@
                     <div class="modal-content">
 
                         <div class="mySlides">
-                            <div class="numbertext">1 / 5</div>
-                            <img src="{{ asset('images/prewed1.jpg') }}" style="width:100%">
-                        </div>
-
-                        <div class="mySlides">
-                            <div class="numbertext">2 / 5</div>
+                            <div class="numbertext">1 / 2</div>
                             <img src="{{ asset('images/prewed2.jpg') }}" style="width:100%">
                         </div>
 
 
                         <div class="mySlides">
-                            <div class="numbertext">3 / 5</div>
+                            <div class="numbertext">2 / 2</div>
                             <img src="{{ asset('images/prewed3.jpg') }}" style="width:100%">
-                        </div>
-
-                        <div class="mySlides">
-                            <div class="numbertext">4 / 5</div>
-                            <img src="{{ asset('images/berdua.jpg') }}" style="width:100%">
-                        </div>
-
-                        <div class="mySlides">
-                            <div class="numbertext">5 / 5</div>
-                            <img src="{{ asset('images/prewed4.jpg') }}" style="width:100%">
                         </div>
 
                         <!-- Next/previous controls -->
@@ -230,28 +194,19 @@
 
                         <!-- Thumbnail image controls -->
                         <div class="column">
-                            <img class="demo" src="{{ asset('images/prewed1.jpg') }}" onclick="currentSlide(1)">
+                            <img class="demo" src="{{ asset('images/prewed2.jpg') }}" onclick="currentSlide(1)">
                         </div>
 
                         <div class="column">
-                            <img class="demo" src="{{ asset('images/prewed2.jpg') }}" onclick="currentSlide(2)">
+                            <img class="demo" src="{{ asset('images/prewed3.jpg') }}" onclick="currentSlide(2)">
                         </div>
 
-                        <div class="column">
-                            <img class="demo" src="{{ asset('images/prewed3.jpg') }}" onclick="currentSlide(3)">
-                        </div>
-
-                        <div class="column">
-                            <img class="demo" src="{{ asset('images/berdua.jpg') }}" onclick="currentSlide(4)">
-                        </div>
-                        <div class="column">
-                            <img class="demo" src="{{ asset('images/prewed4.jpg') }}" onclick="currentSlide(5)">
-                        </div>
                     </div>
                 </div>
             </section>
 
             <section id="komentar">
+                @livewire('comments')
             </section>
 
         </div>

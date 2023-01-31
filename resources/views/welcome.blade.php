@@ -57,7 +57,7 @@
         </audio>
         <div id="backdrop" class=" flex flex-col items-center">
             <svg @click="active = 2" style="width: 60px; height: 60px "viewBox="0 0 24 24"
-                class=' text-pink-500 animate-pulse cursor-pointer'>
+                class=' text-pink-500 animate-pulse cursor-pointer' onclick="togglePlay()">
                 <path fill="currentColor"
                     d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M9.75,7.82C8.21,7.82 7,9.03 7,10.57C7,12.46 8.7,14 11.28,16.34L12,17L12.72,16.34C15.3,14 17,12.46 17,10.57C17,9.03 15.79,7.82 14.25,7.82C13.38,7.82 12.55,8.23 12,8.87C11.45,8.23 10.62,7.82 9.75,7.82Z" />
             </svg>
@@ -154,9 +154,13 @@
                     </div>
                     <div class="mt-10 space-y-3 text-slate-600">
                         <div>
-                            G-Maps Link : <a href="https://maps.google.com/?q=-6.972199,110.307066&entry=gps" target="__blank" class="text-red-500">Clik Me</a>
+                            G-Maps Link : <a href="https://maps.google.com/?q=-6.972199,110.307066&entry=gps"
+                                target="__blank" class="text-red-500">Clik Me</a>
                         </div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.51962224423318!2d110.30714384542104!3d-6.972237887451002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf05b7e8fb58e4a51!2zNsKwNTgnMTkuOSJTIDExMMKwMTgnMjUuNCJF!5e0!3m2!1sid!2sid!4v1675131067673!5m2!1sid!2sid" width="300" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.51962224423318!2d110.30714384542104!3d-6.972237887451002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf05b7e8fb58e4a51!2zNsKwNTgnMTkuOSJTIDExMMKwMTgnMjUuNCJF!5e0!3m2!1sid!2sid!4v1675131067673!5m2!1sid!2sid"
+                            width="300" height="480" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </section>
@@ -263,10 +267,19 @@
         </div>
     </section>
     <script>
+        var myAudio = document.getElementById("audio");
+        var isPlaying = true;
 
-        // document.getElementById("audio").play();
-        document.querySelector("audio").play();
+        function togglePlay() {
+            myAudio.play();
+        };
 
+        // myAudio.onplaying = function() {
+        //     isPlaying = true;
+        // };
+        // myAudio.onpause = function() {
+        //     isPlaying = false;
+        // }
         // Open the Modal
         function openModal() {
             document.getElementById("myModal").style.display = "block";

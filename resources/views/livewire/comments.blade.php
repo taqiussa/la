@@ -1,7 +1,7 @@
 <form wire:submit.prevent="simpan">
 
     <div
-        class="w-full border border-slate-200 shadow-sm shadow-pink-700 backdrop-blur bg-white/80 rounded-lg flex flex-col  items-center px-3 py-3 space-y-3">
+        class="w-full border border-slate-200 shadow-sm shadow-pink-700 backdrop-blur bg-white/30 rounded-lg flex flex-col  items-center px-3 py-3 space-y-3">
         <div class="font-bold text-xl text-slate-600">
             Ucapan Selamat dan Do'a
         </div>

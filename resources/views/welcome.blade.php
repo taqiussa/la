@@ -90,7 +90,7 @@
         <div class="flex-grow overflow-y-auto p-3 space-y-5 scroll-smooth pb-10">
             <section id="jadwal">
                 <div
-                    class=" border border-slate-200 shadow-sm shadow-pink-700 backdrop-blur bg-white/80 rounded-lg flex flex-col justify-center items-center px-1 py-5">
+                    class=" border border-slate-200 shadow-sm shadow-pink-700 backdrop-blur bg-white/30 rounded-lg flex flex-col justify-center items-center px-1 py-5">
                     <div>
                         <img src="{{ asset('images/bismillah.png') }}" alt="pria" class="w-60">
                     </div>
@@ -129,7 +129,7 @@
 
             <section id="lokasi">
                 <div
-                    class=" border border-slate-200 shadow-sm shadow-pink-700 backdrop-blur bg-white/80 rounded-lg flex flex-col justify-center items-center px-1 py-5">
+                    class=" border border-slate-200 shadow-sm shadow-pink-700 backdrop-blur bg-white/30 rounded-lg flex flex-col justify-center items-center px-1 py-5">
                     <div class="mb-1 text-center">
                         <span class="text-slate-700 text-lg font-bold">Akad Nikah :</span>
                     </div>
@@ -167,7 +167,7 @@
 
             <section id="galeri">
                 <div
-                    class=" border border-slate-200 shadow-sm shadow-pink-700 backdrop-blur bg-white/80 rounded-lg flex flex-col  items-center px-1 py-7 space-y-7 pl-7 pr-7">
+                    class=" border border-slate-200 shadow-sm shadow-pink-700 backdrop-blur bg-white/30 rounded-lg flex flex-col  items-center px-1 py-7 space-y-7 pl-7 pr-7">
                     <div class="cursor-pointer border-2 rounded-lg border-fuchsia-400 place-self-start   backdrop-blur bg-white/50 shadow-md shadow-fuchsia-400"
                         onclick="openModal();currentSlide(1)">
                         <img src="{{ asset('images/prewed2.jpg') }}" alt="prewed1" class=" w-64 rounded-lg ">
@@ -241,7 +241,7 @@
             </div>
             <div class="relative">
                 <div @click="active = 1"
-                    class=" absolute -top-5 -translate-x-1/2 bg-white/80 rounded-full cursor-pointer">
+                    class=" absolute -top-5 -translate-x-1/2 bg-white/30 rounded-full cursor-pointer">
                     <div class=" w-12 p-1 rounded-full">
                         <img src="{{ asset('images/exo.png') }}" alt="exo" class="w-full rounded-full">
                     </div>

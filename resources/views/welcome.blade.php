@@ -52,7 +52,7 @@
             <img src="{{ asset('images/prewed1.jpg') }}" alt="couple"
                 class=" w-48 rounded-tr-full rounded-bl-full border-2 border-pink-500 shadow-md shadow-fuchsia-500">
         </div>
-        <audio id="audio" hidden autoplay loop>
+        <audio id="audio" hidden loop>
             <source src="{{ asset('star.wav') }}" type="audio/wav">
         </audio>
         <div id="backdrop" class=" flex flex-col items-center">
@@ -268,7 +268,7 @@
     </section>
     <script>
         var myAudio = document.getElementById("audio");
-        var isPlaying = true;
+        var isPlaying = false;
 
         function togglePlay() {
             myAudio.play();

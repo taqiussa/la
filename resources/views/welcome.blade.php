@@ -168,13 +168,20 @@
             <section id="galeri">
                 <div
                     class=" border border-slate-200 shadow-sm shadow-pink-700 backdrop-blur bg-white/30 rounded-lg flex flex-col  items-center px-1 py-7 space-y-7 pl-7 pr-7">
-                    <div class="cursor-pointer border-2 rounded-lg border-fuchsia-400 place-self-start   backdrop-blur bg-white/50 shadow-md shadow-fuchsia-400"
+                    <div class="cursor-pointer border-2 rounded-lg border-fuchsia-400    backdrop-blur bg-white/50 shadow-md shadow-fuchsia-400"
                         onclick="openModal();currentSlide(1)">
-                        <img src="{{ asset('images/prewed2.jpg') }}" alt="prewed1" class=" w-64 rounded-lg ">
+                        <img src="{{ asset('images/prewed2.jpg') }}" alt="prewed1" class=" w-96 rounded-lg ">
                     </div>
-                    <div class="cursor-pointer border-2 rounded-lg border-fuchsia-400 place-self-end  backdrop-blur bg-white/50 shadow-md shadow-fuchsia-400"
+                    <div class="cursor-pointer border-2 rounded-lg border-fuchsia-400   backdrop-blur bg-white/50 shadow-md shadow-fuchsia-400"
                         onclick="openModal();currentSlide(2)">
-                        <img src="{{ asset('images/prewed3.jpg') }}" alt="prewed1" class=" w-64 rounded-lg ">
+                        <img src="{{ asset('images/prewed3.jpg') }}" alt="prewed1" class=" w-96 rounded-lg ">
+                    </div>
+                    <div class=" text-justify text-slate-600 font-bold text-sm">
+                        <q>
+                            The beauty of marriage is not always seen from the very beginning but rather as love grows
+                            and develops over time.
+                        </q>
+                        — Fawn Weaver
                     </div>
                 </div>
                 <!-- The Modal/Lightbox -->

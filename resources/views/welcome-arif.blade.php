@@ -142,12 +142,12 @@
                         </span>
                     </div>
                     <div class="mb-1 text-center">
-                        <span class="text-slate-700 text-lg font-bold">Resepsi :</span>
+                        <span class="text-slate-700 text-lg font-bold">Unduh Mantu :</span>
                     </div>
                     <div class="mb-1 text-center">
                         <span class="text-slate-600 text-lg ">
-                            Jumat, 26 Februari 2023 <br>
-                            Pukul. 10.00 WIB - 14.00 WIB <br>
+                            Minggu, 26 Februari 2023 <br>
+                            Pukul. 11.00 WIB - Selesai <br>
                             bertempat di rumah kami <br> Desa Kebonagung Rt 03 Rw 01 <br>
                             Ngampel - Kendal
                         </span>

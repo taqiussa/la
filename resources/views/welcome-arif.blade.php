@@ -219,7 +219,7 @@
                 </div>
             </section>
 
-            <section class="mb-10" id="komentar">
+            <section class="pb-10" id="komentar">
                 @livewire('comments')
             </section>
 

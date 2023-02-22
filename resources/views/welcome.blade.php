@@ -225,7 +225,9 @@
             <section class="mb-20" id="komentar">
                 @livewire('comments')
             </section>
-
+            <div>
+                &nbsp;
+            </div>
         </div>
 
         <div id="footer"

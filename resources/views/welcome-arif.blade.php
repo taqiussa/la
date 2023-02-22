@@ -154,10 +154,13 @@
                     </div>
                     <div class="mt-10 space-y-3 text-slate-600">
                         <div>
-                            G-Maps Link : <a href="https://goo.gl/maps/zbzrHpKMkBHKfrmk6"
-                                target="__blank" class="text-red-500">Clik Me</a>
+                            G-Maps Link : <a href="https://goo.gl/maps/zbzrHpKMkBHKfrmk6" target="__blank"
+                                class="text-red-500">Clik Me</a>
                         </div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d247.5144794273602!2d110.18421789889396!3d-6.981965628548909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1675909797757!5m2!1sid!2sid" width="300" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d247.5144794273602!2d110.18421789889396!3d-6.981965628548909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1675909797757!5m2!1sid!2sid"
+                            width="300" height="480" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </section>
@@ -222,7 +225,9 @@
             <section class="mb-20" id="komentar">
                 @livewire('comments')
             </section>
-
+            <div>
+                &nbsp;
+            </div>
         </div>
 
         <div id="footer"

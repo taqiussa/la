@@ -1,4 +1,4 @@
-<form wire:submit.prevent="simpan">
+<div>
 
     <div
         class="w-full border border-slate-200 shadow-sm shadow-pink-700 backdrop-blur bg-white/30 rounded-lg flex flex-col  items-center px-3 py-3 space-y-3">
@@ -7,14 +7,17 @@
         </div>
         <div class="w-full">
             <x-input-label for="password" :value="__('Masukkan Nama')" class="place-self-start font-bold text-slate-500" />
-            <x-text-input wire:model.defer="nama" id="nama" class="block mt-1 w-full" type="text" name="nama" required />
+            <x-text-input wire:model.defer="nama" id="nama" class="block mt-1 w-full" type="text" name="nama"
+                required />
             @error('nama')
                 <x-input-error :messages="$message" class="mt-2" />
             @enderror
         </div>
         <div class="w-full">
             <x-input-label for="password" :value="__('Masukkan Ucapan')" class="place-self-start font-bold text-slate-500" />
-            <x-text-input wire:model.defer="ucapan" id="ucapan" class="block mt-1 w-full" type="text" name="ucapan" required />
+            <textarea wire:model.defer="ucapan" id="ucapan"
+                class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"
+                type="text" name="ucapan" required></textarea>
             @error('ucapan')
                 <x-input-error :messages="$message" class="mt-2" />
             @enderror
@@ -36,10 +39,10 @@
                         </div>
                     </div>
                     <div class="text-slate-700 tracking-wider text-justify">
-                        {{ $ucapan->ucapan}}
+                        {{ $ucapan->ucapan }}
                     </div>
                 </div>
             @endforeach
         </div>
     </div>
-</form>
+</div>

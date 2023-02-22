@@ -226,7 +226,7 @@
         </div>
 
         <div id="footer"
-            class="sticky flex-1 w-full bottom-0 flex justify-between  px-7 py-1 backdrop-blur bg-white/60 scroll-smooth">
+            class="sticky flex-1 w-[28rem] bottom-0 flex justify-between  px-7 py-1 backdrop-blur bg-white/60 scroll-smooth">
             <div>
                 <a href="#jadwal">
                     <svg style="width:36px;height:36px" viewBox="0 0 24 24" class="text-pink-300 cursor-pointer">

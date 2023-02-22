@@ -222,7 +222,7 @@
                 </div>
             </section>
 
-            <section class="pb-10" id="komentar">
+            <section class="mb-20" id="komentar">
                 @livewire('comments')
             </section>
 

@@ -36,5 +36,6 @@ class Comments extends Component
         $validate = $this->validate();
 
         Comment::create($validate);
+        session()->flash('message', 'Ucapan Terkirim ! Terima kasih.');
     }
 }

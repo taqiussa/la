@@ -18,6 +18,14 @@
             <textarea wire:model.defer="ucapan" id="ucapan"
                 class="block mt-1 w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"
                 type="text" name="ucapan" required></textarea>
+            <small wire:loading wire:target="simpan" class="text-sm text-slate-400">Mengirim...</small>
+            @if (session()->has('message'))
+                <div class="text-emerald-500">
+
+                    {{ session('message') }}
+
+                </div>
+            @endif
             @error('ucapan')
                 <x-input-error :messages="$message" class="mt-2" />
             @enderror
